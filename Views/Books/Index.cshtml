@@ -1,0 +1,31 @@
+﻿@model  List<CodebaseProject.Models.Domain.Book>
+@{
+}
+
+<h1>Books</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>BookId</th>
+			<th>BookName</th>
+			<th>Edition</th>
+			<th>Author</th>
+			
+</tr>
+	</thead>
+	<tbody>
+		@foreach (var book in Model)
+		{
+		<tr>
+				<td>@book.BookId</td>
+				<td>@book.BookName</td>
+				<td>@book.Edition</td>
+				<td>@book.Author</td>
+				<td><a href="Books/View/@book.BookId">View</a></td>
+		</tr>
+		}
+	</tbody>
+
+
+</table>

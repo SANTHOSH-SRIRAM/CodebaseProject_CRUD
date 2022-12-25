@@ -1,0 +1,37 @@
+﻿@model CodebaseProject.Models.UpdateBookViewModel
+@{
+}
+
+<h2>Edit Books</h2>
+
+<form method="post" action="View" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">BookId</label>
+        <input type="text" class="form-control" asp-for="BookId" readonly>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">BookName</label>
+        <input type="text" class="form-control" asp-for="BookName">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Edition</label>
+        <input type="number" class="form-control" asp-for="Edition">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Author</label>
+        <input type="text" class="form-control" asp-for="Author">
+
+    </div>
+
+    <button type="submit" class="btn btn-primary" asp-action="Add">Submit</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Employees">Delete</button>
+
+</form>
